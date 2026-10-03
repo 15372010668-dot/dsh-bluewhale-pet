@@ -12,6 +12,10 @@
 
 </div>
 
+<p align="center">
+  <img src="assets/screenshots/bluewhale-running.png" alt="The blue whale companion running in the DSH page" width="360">
+</p>
+
 **dsh-bluewhale-pet** is an in-page companion plugin for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH). A blue whale stays in the corner of the page while you work, so you can keep an eye on your tasks and respond to anything that needs your attention.
 
 ## Features

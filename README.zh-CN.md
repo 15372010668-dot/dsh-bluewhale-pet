@@ -12,6 +12,10 @@
 
 </div>
 
+<p align="center">
+  <img src="assets/screenshots/bluewhale-running.png" alt="蓝鲸桌宠在 DSH 页面中运行的效果" width="360">
+</p>
+
 **dsh-bluewhale-pet** 是一款运行在 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）中的页内桌宠插件。工作时让一头蓝鲸陪在页面角落，随时查看任务进展、处理需要你关注的请求。
 
 ## 功能概览
