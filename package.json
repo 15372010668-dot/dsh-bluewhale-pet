@@ -23,6 +23,7 @@
     "NOTICE",
     "lib",
     "assets/branding/dsh-codex-pet-banner.png",
+    "assets/codex/bluewhale/spritesheet.webp",
     "assets/screenshots/*.png",
     "skills",
     "cordis.patch.yml",

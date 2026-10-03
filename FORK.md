@@ -10,10 +10,10 @@
 | --- | --- | --- |
 | 包名 / 客户端模块 id | `@michengai/dsh-codex-pet` | `dsh-bluewhale-pet` |
 | 版本号 | 跟随上游 | 自有版本线（从 `1.0.0` 起） |
-| 内置宠物 | 9 只（Codex / Seedy / Rocky …） | **无**，只列自定义宠物 |
-| `assets/codex/`（OpenAI Codex 图集，11 MB） | 打包 | **已删除** |
+| 内置宠物 | 9 只（Codex / Seedy / Rocky …） | **1 只**（`bluewhale` 小蓝鲸，随包附带） |
+| `assets/codex/`（OpenAI Codex 图集，11 MB） | 打包 9 只 | **只保留 `bluewhale/spritesheet.webp`**（其余删除） |
 | 检查更新 / 自动安装 | 有（设置页按钮 + `/api/update`） | **已移除**（UI 与路由都删了） |
-| 默认选中宠物 | `codex` | `custom:bluewhale` |
+| 默认选中宠物 | `codex` | `bluewhale`（内置） |
 
 上游的 GitHub / Issues 链接、LICENSE、原始版权声明**保留**（Apache-2.0 要求署名）。
 改动清单同时写在 `NOTICE` 里。

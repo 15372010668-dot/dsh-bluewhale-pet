@@ -70,10 +70,10 @@ function check(ok, label, detail = "") {
 const state = await call("GET", "/dsh-codex-pet/api/state");
 check(state.status === 200, "GET /api/state -> 200", String(state.status));
 const ids = (state.json?.pets ?? []).map((p) => p.id);
-check(ids.includes("custom:bluewhale"), "custom pet is listed", JSON.stringify(ids));
+check(ids.includes("bluewhale"), "builtin bluewhale pet is listed", JSON.stringify(ids));
 check(
-  (state.json?.pets ?? []).every((p) => p.source === "custom"),
-  "no built-in pets remain",
+  (state.json?.pets ?? []).find((p) => p.id === "bluewhale")?.source === "builtin",
+  "bluewhale is a built-in pet",
   JSON.stringify(ids)
 );
 check(state.json?.config?.roam === false, "config.roam defaults to false", JSON.stringify(state.json?.config));
@@ -106,11 +106,10 @@ check([404, 405].includes(updateGet.status), "update route gone (GET)", String(u
 const updatePost = await call("POST", "/dsh-codex-pet/api/update", {});
 check(updatePost.status === 404 && updatePost.json?.error, "update route gone (POST -> unknown op)", JSON.stringify(updatePost.json));
 
-const asset = await call("GET", "/dsh-codex-pet/asset/custom%3Abluewhale");
-check(asset.status === 200 && asset.type === "image/png", "pet spritesheet still served", JSON.stringify(asset.type));
+const asset = await call("GET", "/dsh-codex-pet/asset/bluewhale");
+check(asset.status === 200 && asset.type === "image/webp", "builtin bluewhale spritesheet served", JSON.stringify(asset.type));
 
-const builtinAsset = await call("GET", "/dsh-codex-pet/asset/codex");
-check(builtinAsset.status === 400 || builtinAsset.status === 404, "built-in asset gone", String(builtinAsset.status));
+check(state.json?.config?.selected === "bluewhale", "default selected pet is builtin bluewhale", JSON.stringify(state.json?.config?.selected));
 
 console.log(failures ? `\n${failures} check(s) failed` : "\nall checks passed");
 process.exit(failures ? 1 : 0);

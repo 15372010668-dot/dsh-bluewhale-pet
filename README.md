@@ -24,7 +24,7 @@
 - **Multiple tasks at a glance**: see running, completed, failed, and pending tasks; when there are no notifications the pet just stays quiet.
 - **Act from the notification**: open the associated conversation, stop its current turn, or handle approval, question, and plan requests.
 - **Full-screen roaming**: while a task is running, the whale wanders freely around the page and swims back to its spot when the task ends (toggle and speed are configurable in settings).
-- **Custom pets**: no built-in pets ship with the plugin; it shows only the custom pets in `~/.dsh/codex-pet/pets`.
+- **Built-in blue whale**: a pixel-style blue whale ships with the plugin, ready to use out of the box. Custom pets in `~/.dsh/codex-pet/pets` are shown as well.
 - **Small interactions**: drag to move, double-click to jump, and right-click for the pet menu.
 
 ## Usage
