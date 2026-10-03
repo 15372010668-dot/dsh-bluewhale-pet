@@ -1,14 +1,14 @@
-# zkb-codex-pet — 个人 fork
+# dsh-bluewhale-pet — 个人 fork
 
 这是 `@michengai/dsh-codex-pet@0.1.7` 的**改名 fork**，装在 DSH 的 `web` profile 里。
-包名已从 `@michengai/dsh-codex-pet` 改为 **`zkb-codex-pet`**，所以上游发新版本
+包名已从 `@michengai/dsh-codex-pet` 改为 **`dsh-bluewhale-pet`**，所以上游发新版本
 （`@michengai/dsh-codex-pet@x.y.z`）**不会再覆盖这里**——在 DSH 眼里它们是两个包。
 
 ## 与原版的差异
 
 | 项 | 原版 | 本 fork |
 | --- | --- | --- |
-| 包名 / 客户端模块 id | `@michengai/dsh-codex-pet` | `zkb-codex-pet` |
+| 包名 / 客户端模块 id | `@michengai/dsh-codex-pet` | `dsh-bluewhale-pet` |
 | 版本号 | 跟随上游 | 自有版本线（从 `1.0.0` 起） |
 | 内置宠物 | 9 只（Codex / Seedy / Rocky …） | **无**，只列自定义宠物 |
 | `assets/codex/`（OpenAI Codex 图集，11 MB） | 打包 | **已删除** |
@@ -63,7 +63,7 @@
 ## 改代码
 
 本 fork 以 `link:` 方式装进 profile，也就是说
-`~/.dsh/profiles/web/node_modules/zkb-codex-pet` 是指向本目录的软链接：
+`~/.dsh/profiles/web/node_modules/dsh-bluewhale-pet` 是指向本目录的软链接：
 
 ```
 ~/dsh-plugins/codex-pet/          <-- 改这里
@@ -81,7 +81,7 @@
 
 ```bash
 # 卸掉 fork
-dsh plugin --profile web remove zkb-codex-pet
+dsh plugin --profile web remove dsh-bluewhale-pet
 
 # 需要时装回原版（宠物数据一直都在，不受影响）
 dsh plugin --profile web add @michengai/dsh-codex-pet@0.1.7 --registry=https://registry.npmjs.org/
@@ -93,11 +93,11 @@ dsh plugin --profile web add @michengai/dsh-codex-pet@0.1.7 --registry=https://r
 
 ```json
 // ~/.dsh/profiles/web/package.json
-"dependencies": { "zkb-codex-pet": "link:/Users/zkb/dsh-plugins/codex-pet" },
-"dsh": { "profile": { "bundles": [ ..., "zkb-codex-pet" ] } }
+"dependencies": { "dsh-bluewhale-pet": "link:/Users/zkb/dsh-plugins/codex-pet" },
+"dsh": { "profile": { "bundles": [ ..., "dsh-bluewhale-pet" ] } }
 ```
 
-`node_modules/zkb-codex-pet` 是指向本目录的软链接，所以**改本目录的文件 = 改正在用的插件**，不用重装。
+`node_modules/dsh-bluewhale-pet` 是指向本目录的软链接，所以**改本目录的文件 = 改正在用的插件**，不用重装。
 
 ## 三处名字必须一致（改名前务必同步）
 
@@ -105,12 +105,12 @@ DSH 靠这三个名字对齐，任何一个不一致都会加载失败：
 
 | 位置 | 值 |
 | --- | --- |
-| `package.json` → `name` | `zkb-codex-pet` |
-| `cordis.patch.yml` → `insert[0].name` | `zkb-codex-pet` |
-| `lib/client.js` → `__ModuleLoader__.load({id:...})` | `zkb-codex-pet` |
+| `package.json` → `name` | `dsh-bluewhale-pet` |
+| `cordis.patch.yml` → `insert[0].name` | `dsh-bluewhale-pet` |
+| `lib/client.js` → `__ModuleLoader__.load({id:...})` | `dsh-bluewhale-pet` |
 
 - 第 2 项错了 → Loader 找不到模块（因为 patch 里的 `name` 才是真正被 import 的 spec）。
 - 第 3 项错了 → 浏览器端 boot 直接抛
   `client-modules: bundle ... loaded without registering "<name>" via __ModuleLoader__.load`。
 
-自查：`dsh --profile web --dump-config | grep -A2 codex-pet`
+自查：`dsh --profile web --dump-config | grep -A2 bluewhale-pet`

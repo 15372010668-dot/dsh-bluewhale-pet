@@ -1,5 +1,5 @@
 /**
- * Roaming-engine test for zkb-codex-pet.
+ * Roaming-engine test for dsh-bluewhale-pet.
  *
  * Slices the actual roaming useEffect body out of lib/client.js and drives it
  * with a fake clock + fake rAF, so the real code (not a copy) is exercised:

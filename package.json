@@ -1,16 +1,16 @@
 {
-  "name": "zkb-codex-pet",
+  "name": "dsh-bluewhale-pet",
   "version": "1.2.1",
   "license": "Apache-2.0",
   "description": "Personal fork of @michengai/dsh-codex-pet. Built-in pet artwork removed; on-disk update checks removed. A pet companion for DeepSeek Harness.",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/15372010668-dot/zkb-codex-pet.git"
+    "url": "git+https://github.com/15372010668-dot/dsh-bluewhale-pet.git"
   },
-  "homepage": "https://github.com/15372010668-dot/zkb-codex-pet#readme",
+  "homepage": "https://github.com/15372010668-dot/dsh-bluewhale-pet#readme",
   "bugs": {
-    "url": "https://github.com/15372010668-dot/zkb-codex-pet/issues"
+    "url": "https://github.com/15372010668-dot/dsh-bluewhale-pet/issues"
   },
   "main": "lib/index.js",
   "exports": {

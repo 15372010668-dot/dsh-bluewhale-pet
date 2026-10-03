@@ -1,4 +1,4 @@
-> **This is `zkb-codex-pet`, a personal renamed fork.** The built-in pet
+> **This is `dsh-bluewhale-pet`, a personal renamed fork.** The built-in pet
 > artwork has been removed, so the plugin now ships no pets of its own and shows
 > only the custom pets in `~/.dsh/codex-pet/pets`. The update check has been
 > removed as well. See `FORK.md` for the full list of changes.

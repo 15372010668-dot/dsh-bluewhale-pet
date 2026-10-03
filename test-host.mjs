@@ -1,5 +1,5 @@
 /**
- * Host-half smoke test for zkb-codex-pet.
+ * Host-half smoke test for dsh-bluewhale-pet.
  *
  * Boots the plugin's HTTP handler in-process against a THROWAWAY data dir
  * (your real ~/.dsh/codex-pet is never touched) and exercises the config
