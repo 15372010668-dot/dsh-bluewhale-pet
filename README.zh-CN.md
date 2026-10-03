@@ -1,97 +1,31 @@
-> **这是 `dsh-bluewhale-pet`，一个改名后的个人 fork。** 内置宠物图集已删除，插件不再自带
-> 任何宠物，只显示 `~/.dsh/codex-pet/pets` 下的自定义宠物；检查更新功能也已移除。
-> 完整改动见 `FORK.md`。
-
-<p align="center">
-  <img src="assets/branding/dsh-codex-pet-banner.png" alt="DSH Codex Pet" width="100%">
-</p>
-
 <div align="center">
 
-# DSH Codex Pet
+# DSH Blue Whale Pet
 
-**让宠物陪你处理 DeepSeek Harness 任务**
+**一只陪你处理 DeepSeek Harness 任务的蓝鲸桌宠**
 
-[English](README.md) · [更新日志](CHANGELOG.zh-CN.md) · [Apache-2.0](LICENSE)
+[English](README.md) · [Apache-2.0](LICENSE)
 
-[![许可证：Apache-2.0](https://img.shields.io/badge/许可证-Apache--2.0-blue.svg)](LICENSE)
-[![npm package](https://img.shields.io/npm/v/%40michengai%2Fdsh-codex-pet.svg?label=npm%20package)](https://www.npmjs.com/package/@michengai/dsh-codex-pet)
-[![npm 下载量](https://img.shields.io/npm/dt/%40michengai%2Fdsh-codex-pet.svg?label=npm%20%E4%B8%8B%E8%BD%BD%E9%87%8F)](https://www.npmjs.com/package/@michengai/dsh-codex-pet)
-[![DSH Web Plugin](https://img.shields.io/badge/DSH%20Web-Plugin-0f766e.svg)](https://github.com/MichengAI/dsh-codex-pet)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
+[![DSH Web Plugin](https://img.shields.io/badge/DSH%20Web-Plugin-0f766e.svg)](https://github.com/15372010668-dot/dsh-bluewhale-pet)
 [![Node.js 22.19+](https://img.shields.io/badge/Node.js-22.19%2B-339933.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
 
 </div>
 
-> DSH Codex Pet 是社区维护的 DeepSeek Harness（DSH）宠物插件，并非 OpenAI 或 DeepSeek AI 官方产品。
+**dsh-bluewhale-pet** 是一款运行在 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）中的页内桌宠插件。工作时让一头蓝鲸陪在页面角落，随时查看任务进展、处理需要你关注的请求。
 
 ## 功能概览
 
-让宠物陪你处理 DSH 任务，随时查看会话进展和待处理请求。你可以选择内置宠物，也可以通过 Skill 创建自己的伙伴。
-
-- **9 只内置宠物**：在宠物设置中选择伙伴、调整大小，资源随插件本地打包。
-- **页内陪伴**：在 DSH 网页中陪伴工作；桌面浮窗需要使用支持宠物功能的桌面端。
-- **多会话动态**：查看运行中、完成、错误和待处理请求；没有通知时只显示宠物。
-- **就近处理任务**：从通知打开对应会话、停止当前轮次，或处理支持的审批、问题和计划请求。
-- **按需安静**：关闭单条提醒不会停止任务；通过菜单或设置收起、恢复宠物。
-- **创建自己的伙伴**：在设置中描述宠物，通过随包 `hatch-pet` Skill 发起独立 DSH 创建任务。
+- **页内陪伴**：蓝鲸常驻 DSH 页面角落，陪你工作。
+- **多会话动态**：查看运行中、完成、出错和待处理的任务；没有通知时只安静地待着。
+- **就近处理**：从通知直接打开对应会话、停止当前轮次，或处理审批、问题和计划请求。
+- **全屏漫游**：任务运行时，蓝鲸会在整个页面里自由游走；任务结束再游回原位停下（可在设置中开关、调节速度）。
+- **自定义宠物**：内置宠物不随包附带，只显示 `~/.dsh/codex-pet/pets` 下的自定义宠物。
 - **轻量互动**：拖动移动、双击跳跃、右键打开宠物菜单。
-
-## 界面预览
-
-### 多会话提醒
-
-宠物旁集中展示运行中的任务，可分别打开会话、停止当前轮次或关闭提醒。
-
-<p align="center">
-  <img src="assets/screenshots/pet-notifications.png" alt="宠物与两条运行中的任务通知" width="403">
-</p>
-
-### 宠物设置
-
-选择 9 只内置宠物、打开自定义宠物目录，并调整宠物大小。
-
-![宠物库与外观设置](assets/screenshots/pet-settings.png)
-
-### 会话内陪伴
-
-在 DSH 中继续工作，宠物和任务通知显示在页面角落。
-
-![DSH 会话中的宠物与任务通知](assets/screenshots/pet-conversation.png)
-
-## DSH 产品生态
-
-想使用桌面工作台，可下载 [DSH Codex Desktop](https://github.com/MichengAI/dsh-codex-desktop/releases)；已有 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 环境，可按各项目 README 按需安装。以下列出 11 个自研插件；桌面端实际随附范围以对应版本的发行说明和内置清单为准。
-
-| 插件 | 你可以用它做什么 |
-| --- | --- |
-| [Codex UI](https://github.com/MichengAI/dsh-codex-ui) | 整理项目与会话、搜索任务、跳转对话轮次 |
-| [Agency Agents](https://github.com/MichengAI/dsh-agency-agents) | 按任务选择并召唤专业角色 |
-| [Skills Manager](https://github.com/MichengAI/dsh-skills-manager) | 统一查找、启停、创建和导入本机技能 |
-| [Archive Manager](https://github.com/MichengAI/dsh-archive-manager) | 搜索、恢复或清理已归档会话 |
-| [IM Connect](https://github.com/MichengAI/dsh-im-connect) | 从消息平台下任务、收回复 |
-| [Automation](https://github.com/MichengAI/dsh-automation) | 按计划执行任务，查看每次运行的结果 |
-| [BTW](https://github.com/MichengAI/dsh-btw) | 在当前上下文中临时旁问，不打断主任务 |
-| [Simplify](https://github.com/MichengAI/dsh-simplify) | 用 `/simplify` 整理 Git 改动范围内的代码 |
-| [PUA](https://github.com/MichengAI/dsh-pua) | 引导 Agent 在失败时换方法、查原因，并在完成前验证结果 |
-| [Code Review](https://github.com/MichengAI/dsh-code-review) | 用 `/review` 发起独立 Agent 代码审查，在当前会话接收报告 |
-| [Codex Pet](https://github.com/MichengAI/dsh-codex-pet) | 通过桌面宠物查看会话提醒、处理工具审批和问题回答 |
-
-## 安装
-
-支持的 DeepSeek Harness 版本：**`0.1.0-rc.8`、`0.1.1-rc.2`、`0.1.2-rc.1`、`0.1.5-rc.1`、`0.1.5-rc.2`、`0.1.6-alpha.1`、`0.1.6-alpha.2`**。新增兼容不移除这些旧版。需要可用的 `dsh` 命令。以下示例使用 `web` profile，请按实际环境替换。
-
-```powershell
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-$OutputEncoding = [System.Text.Encoding]::UTF8
-
-dsh plugin --profile web add @michengai/dsh-codex-pet@latest --registry=https://registry.npmjs.org/ --ignore-scripts
-```
-
-安装后重启 DSH，再打开 **设置 → 宠物**。
 
 ## 使用
 
-打开 **设置 → 宠物**，也可从宠物右键菜单打开设置。
+打开 **设置 → 宠物**，也可以从蓝鲸的右键菜单进入设置。
 
 | 目标 | 操作 |
 | --- | --- |
@@ -104,10 +38,6 @@ dsh plugin --profile web add @michengai/dsh-codex-pet@latest --registry=https://
 | 关闭提醒 | 点击通知关闭按钮，任务仍继续运行。 |
 | 收起或恢复宠物 | 使用右键菜单或宠物设置。 |
 
-宠物承担通知和待处理操作。新建会话、输入后续消息仍在 DSH 主界面完成。
-
-已知问题：在 DSH `0.1.5-rc.2` 中，若模型尚未开始响应就停止任务，宠物可能显示失败通知。
-
 ### 创建自定义宠物
 
 1. 打开宠物设置，点击 **创建**，描述想要的伙伴。
@@ -115,27 +45,36 @@ dsh plugin --profile web add @michengai/dsh-codex-pet@latest --registry=https://
 3. 在该任务中查看进展，创建使用 DSH 当前配置的模型和图像工具。
 4. 宠物文件生成并保存后，刷新宠物库并选择新伙伴。
 
-创建宠物需要先在 DSH 中配置图像生成工具。
+> 创建宠物需要先在 DSH 中配置图像生成工具。
 
-## 更新与卸载
+## 安装
 
-在 **设置 → 宠物 → 检查更新** 中更新。若当前环境不支持在线安装，可复制界面提供的更新命令。等待正在运行的任务结束后操作，完成后按提示重启 DSH。
+本插件是一个个人 fork，**没有发布到 npm**，通过 **`link:` 本地依赖**的方式装入 DSH profile。
 
-卸载命令：
+1. 克隆本仓库：
 
-```powershell
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-$OutputEncoding = [System.Text.Encoding]::UTF8
+   ```bash
+   git clone https://github.com/15372010668-dot/dsh-bluewhale-pet.git
+   cd dsh-bluewhale-pet
+   ```
 
-dsh plugin --profile web remove @michengai/dsh-codex-pet
-```
+2. 在你的 DSH profile 中的 `package.json` 里把它加为 link 依赖（示例使用 `web` profile）：
 
-自定义宠物默认保存在用户目录的 `.dsh/codex-pet/pets` 下，可从宠物设置打开。设置了 `DSH_HOME` 时使用该目录下的 `codex-pet/pets`。卸载插件会保留这些文件与配置。
+   ```json
+   {
+     "dependencies": {
+       "dsh-bluewhale-pet": "link:/绝对/路径/dsh-bluewhale-pet"
+     },
+     "dsh": {
+       "profile": {
+         "bundles": ["...", "dsh-bluewhale-pet"]
+       }
+     }
+   }
+   ```
 
-## 参与开发
-
-本地开发、测试与发布流程见 [开发与验证指南](https://github.com/MichengAI/dsh-codex-pet/blob/main/CONTRIBUTING.md)。
+3. 重启 DSH，再打开 **设置 → 宠物**。
 
 ## 许可证
 
-原创插件代码采用 [Apache License 2.0](LICENSE)。随包宠物图集来源于 OpenAI Codex，不属于本项目授予的 Apache-2.0 许可范围，详见 [NOTICE](NOTICE)。
+本项目采用 [Apache License 2.0](LICENSE) 授权。更多信息见 [NOTICE](NOTICE)。

@@ -1,98 +1,31 @@
-> **This is `dsh-bluewhale-pet`, a personal renamed fork.** The built-in pet
-> artwork has been removed, so the plugin now ships no pets of its own and shows
-> only the custom pets in `~/.dsh/codex-pet/pets`. The update check has been
-> removed as well. See `FORK.md` for the full list of changes.
-
-<p align="center">
-  <img src="assets/branding/dsh-codex-pet-banner.png" alt="DSH Codex Pet" width="100%">
-</p>
-
 <div align="center">
 
-# DSH Codex Pet
+# DSH Blue Whale Pet
 
-**A little companion for your DeepSeek Harness tasks**
+**A blue whale companion for your DeepSeek Harness tasks**
 
-[简体中文](README.zh-CN.md) · [Changelog](CHANGELOG.md) · [Apache-2.0](LICENSE)
+[简体中文](README.zh-CN.md) · [Apache-2.0](LICENSE)
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
-[![npm package](https://img.shields.io/npm/v/%40michengai%2Fdsh-codex-pet.svg?label=npm%20package)](https://www.npmjs.com/package/@michengai/dsh-codex-pet)
-[![npm downloads](https://img.shields.io/npm/dt/%40michengai%2Fdsh-codex-pet.svg?label=npm%20downloads)](https://www.npmjs.com/package/@michengai/dsh-codex-pet)
-[![DSH Web Plugin](https://img.shields.io/badge/DSH%20Web-Plugin-0f766e.svg)](https://github.com/MichengAI/dsh-codex-pet)
+[![DSH Web Plugin](https://img.shields.io/badge/DSH%20Web-Plugin-0f766e.svg)](https://github.com/15372010668-dot/dsh-bluewhale-pet)
 [![Node.js 22.19+](https://img.shields.io/badge/Node.js-22.19%2B-339933.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
 
 </div>
 
-> DSH Codex Pet is a community-maintained pet plugin for DeepSeek Harness (DSH), not an official OpenAI or DeepSeek AI product.
+**dsh-bluewhale-pet** is an in-page companion plugin for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH). A blue whale stays in the corner of the page while you work, so you can keep an eye on your tasks and respond to anything that needs your attention.
 
 ## Features
 
-Keep a companion nearby while you work in DSH, follow task progress, and handle requests that need your attention. Choose a built-in pet or create your own with a Skill.
-
-- **Nine built-in pets**: choose a companion and adjust its size in pet settings. Assets are bundled locally.
-- **In-page companion**: keep a companion in DSH Web. Floating desktop pets require a desktop app with pet support.
-- **Multiple tasks at a glance**: follow running tasks, completion, errors, and requests that need your attention. An empty notification list leaves only the pet visible.
-- **Act from the notification**: open the associated task, stop its current turn, or handle supported approval, question, and plan requests.
-- **Quiet when you need it**: dismiss an individual reminder without stopping its task; collapse or restore the pet through its menu or settings.
-- **Create your own companion**: describe a pet in settings and start a dedicated DSH task using the bundled `hatch-pet` Skill.
+- **In-page companion**: a blue whale lives in the corner of the DSH page while you work.
+- **Multiple tasks at a glance**: see running, completed, failed, and pending tasks; when there are no notifications the pet just stays quiet.
+- **Act from the notification**: open the associated conversation, stop its current turn, or handle approval, question, and plan requests.
+- **Full-screen roaming**: while a task is running, the whale wanders freely around the page and swims back to its spot when the task ends (toggle and speed are configurable in settings).
+- **Custom pets**: no built-in pets ship with the plugin; it shows only the custom pets in `~/.dsh/codex-pet/pets`.
 - **Small interactions**: drag to move, double-click to jump, and right-click for the pet menu.
-
-## Screenshots
-
-### Multiple task notifications
-
-See running tasks beside your companion, with separate controls to open the conversation, stop its current turn, or dismiss its reminder.
-
-<p align="center">
-  <img src="assets/screenshots/pet-notifications.png" alt="A pet with two running task notifications" width="403">
-</p>
-
-### Pet settings
-
-Choose from the nine built-in pets, access the custom pet directory, and adjust the pet size.
-
-![Pet library and appearance settings](assets/screenshots/pet-settings.png)
-
-### A companion in your conversation
-
-Keep working in DSH while the pet and task notifications remain in the corner of the page.
-
-![Pet and task notifications alongside a DSH conversation](assets/screenshots/pet-conversation.png)
-
-## DSH product ecosystem
-
-For a desktop workbench, download [DSH Codex Desktop](https://github.com/MichengAI/dsh-codex-desktop/releases). Existing [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) installations can add plugins as needed by following each project's README. Below are 11 first-party plugins; consult the corresponding desktop release notes and bundled catalog for what that version includes.
-
-| Plugin | What you can do |
-| --- | --- |
-| [Codex UI](https://github.com/MichengAI/dsh-codex-ui) | Organize projects and conversations, search tasks, and navigate chat turns |
-| [Agency Agents](https://github.com/MichengAI/dsh-agency-agents) | Choose and summon specialists for your task |
-| [Skills Manager](https://github.com/MichengAI/dsh-skills-manager) | Find, enable, create, and import local skills |
-| [Archive Manager](https://github.com/MichengAI/dsh-archive-manager) | Search, restore, or clean up archived conversations |
-| [IM Connect](https://github.com/MichengAI/dsh-im-connect) | Send tasks and receive replies through messaging platforms |
-| [Automation](https://github.com/MichengAI/dsh-automation) | Schedule tasks and review each run |
-| [BTW](https://github.com/MichengAI/dsh-btw) | Ask side questions without interrupting the main task |
-| [Simplify](https://github.com/MichengAI/dsh-simplify) | Use `/simplify` to improve code within your Git changes |
-| [PUA](https://github.com/MichengAI/dsh-pua) | Guide the Agent to try new approaches after failures, investigate causes, and verify results before completion |
-| [Code Review](https://github.com/MichengAI/dsh-code-review) | Use `/review` to request an independent Agent code review and receive the report in the current conversation |
-| [Codex Pet](https://github.com/MichengAI/dsh-codex-pet) | View conversation notifications and respond to tool approvals and questions through a desktop pet |
-
-## Installation
-
-Supported DeepSeek Harness versions: **`0.1.0-rc.8`, `0.1.1-rc.2`, `0.1.2-rc.1`, `0.1.5-rc.1`, `0.1.5-rc.2`, `0.1.6-alpha.1`, and `0.1.6-alpha.2`**. New compatibility is added without dropping these older releases. Make sure the `dsh` command is available. The example uses the `web` profile; replace it with your target profile.
-
-```powershell
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-$OutputEncoding = [System.Text.Encoding]::UTF8
-
-dsh plugin --profile web add @michengai/dsh-codex-pet@latest --registry=https://registry.npmjs.org/ --ignore-scripts
-```
-
-Restart DSH after installation, then open **Settings → Pets**.
 
 ## Usage
 
-Open **Settings → Pets** (`宠物` in the current UI), or open settings from the pet's right-click menu.
+Open **Settings → Pets**, or open settings from the pet's right-click menu.
 
 | Goal | Action |
 | --- | --- |
@@ -105,38 +38,43 @@ Open **Settings → Pets** (`宠物` in the current UI), or open settings from t
 | Dismiss a reminder | Click its close control. The task continues running. |
 | Hide or restore the pet | Use the right-click menu or pet settings. |
 
-The pet is a notification and action surface. Start new conversations and write follow-up messages in the main DSH interface.
-
-Known issue: in DSH `0.1.5-rc.2`, stopping a task before the model starts responding may cause the pet to show a failure notification.
-
 ### Create a custom pet
 
-1. Open pet settings, click **Create** (`创建`), and describe the companion.
-2. Click **Create in DSH** (`在 DSH 中创建`). The plugin opens a dedicated task and sends the bundled Skill instructions.
+1. Open pet settings, click **Create**, and describe the companion.
+2. Click **Create in DSH**. The plugin opens a dedicated task and sends the bundled Skill instructions.
 3. Follow that task's progress. Creation uses DSH's configured model and image tools.
 4. Once the pet files are saved, refresh the pet library and select the new companion.
 
-Creating pets requires an image-generation tool configured in DSH.
+> Creating pets requires an image-generation tool configured in DSH.
 
-## Updates and uninstallation
+## Installation
 
-Use **Settings → Pets → Check for updates**. If automatic installation is unavailable, copy the update command shown in the dialog. Wait for running tasks to finish, then update and restart DSH as prompted.
+This plugin is a personal fork and is **not published to npm**. It is installed into a DSH profile as a **`link:` local dependency**.
 
-To uninstall:
+1. Clone this repository:
 
-```powershell
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-$OutputEncoding = [System.Text.Encoding]::UTF8
+   ```bash
+   git clone https://github.com/15372010668-dot/dsh-bluewhale-pet.git
+   cd dsh-bluewhale-pet
+   ```
 
-dsh plugin --profile web remove @michengai/dsh-codex-pet
-```
+2. Add it as a `link:` dependency in your DSH profile's `package.json` (example uses the `web` profile):
 
-Custom pets are stored in `.dsh/codex-pet/pets` under your user directory by default; open the folder from pet settings. If `DSH_HOME` is set, pets are stored in its `codex-pet/pets` folder. Uninstalling keeps those files and settings.
+   ```json
+   {
+     "dependencies": {
+       "dsh-bluewhale-pet": "link:/absolute/path/dsh-bluewhale-pet"
+     },
+     "dsh": {
+       "profile": {
+         "bundles": ["...", "dsh-bluewhale-pet"]
+       }
+     }
+   }
+   ```
 
-## Contributing
-
-See the [development and validation guide (Chinese)](https://github.com/MichengAI/dsh-codex-pet/blob/main/CONTRIBUTING.md) for local development, testing, and release procedures.
+3. Restart DSH, then open **Settings → Pets**.
 
 ## License
 
-Original plugin code is licensed under [Apache License 2.0](LICENSE). Bundled pet artwork originates from OpenAI Codex and is excluded from this project's Apache-2.0 license grant; see [NOTICE](NOTICE).
+Licensed under the [Apache License 2.0](LICENSE). See [NOTICE](NOTICE) for more information.
